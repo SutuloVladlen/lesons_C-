@@ -26,3 +26,19 @@ else
 }
 */
 
+// Определение выходного дня.
+/*int day = int.Parse(Console.ReadLine());
+
+if (day == 6 && day == 7)
+{
+    Console.WriteLine("Yes");
+}
+if (day > 0 && day < 6)
+{
+    Console.WriteLine("No");
+}
+if (day < 1 && day > 7) ;
+{
+    Console.WriteLine("Incorrect data");
+}
+*/

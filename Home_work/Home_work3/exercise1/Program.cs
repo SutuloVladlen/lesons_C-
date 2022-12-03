@@ -8,33 +8,40 @@ if (!namber5symbols)
     return;
 }
 
-bool x = DefinitioOfPalindromic(n);
+int x = DefinitioOfPalindromic(n);
 
-Console.WriteLine(x);
+if (x == 1)
+{
+    Console.WriteLine("Число является палиндромом");
+}
+if (x == -1)
+{
+    Console.WriteLine("Число не является пятизначным");
+}
+if (x == 0)
+{
+    Console.WriteLine("Число не является палиндромом");
+}
 
-bool DefinitioOfPalindromic(int n)
+int DefinitioOfPalindromic(int n)
 {
     int digitOne = n / 10000;
     int digitFive = n % 10;
     int digitTwy = (n / 1000) % 10;
     int digitFour = (n % 100) / 10;
 
-    if (digitOne >= 10)//я не нашел способа как не ипользуя строк нормально вывести результат ошибку при 
-    // введении не пятизначного числа (можно конечно в самом начале до метода это проверить, но тогда опять 
-    //нужно вводить переменную)
+    if (digitOne >= 10 || n / 10000 == 0)
     {
-        return false;
+        return -1;
     }
     if (digitFive == digitOne && digitFour == digitTwy)
     {
-        return true;
+        return 1;
     }
     else
     {
-        return false;
+        return 0;
     }
 
 }
-
-
 

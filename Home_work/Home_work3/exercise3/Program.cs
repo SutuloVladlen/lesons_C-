@@ -1,6 +1,6 @@
 ﻿int ImputInt()
 {
-    Console.WriteLine("Ввелите число");
+    Console.WriteLine("Введите число");
 
     bool namber = int.TryParse(Console.ReadLine(), out int nam);
 
@@ -30,7 +30,7 @@ void PrintArray(int[] arr)
 {
     for (int i = 0; i < nam; i++)
     {
-        Console.Write($"{arr[i]} ");
+        Console.Write($"{arr[i]}, ");
     }
 
 }

@@ -2,9 +2,7 @@
 int m = int.Parse(Console.ReadLine());
 
 int[] array = CreationArray(m);
-
-// PrintArray(array);
-
+PrintArray(array);
 int positive_nam = AmountPositiveNambers(array);
 Console.Write($"Количество положительных чисел равно {positive_nam}");
 
@@ -31,8 +29,20 @@ int AmountPositiveNambers(int[] array)
     return positive_nam;
 }
 
-// void PrintArray(int[] array);
-// {
-//     Console.WriteLine("[{0}]", string.Join(", ", array));
-// }
-// Немогу понять почему он не хочет вывести массив, если подскажите будет великолепно.
+void PrintArray(int[] array)
+{
+    //Console.WriteLine("[{0}]", string.Join(", ", array));
+    // Console.Write("[");
+    // for (var i = 0; i < array.Length; i++)
+    // {
+
+    //     Console.Write($"{array[i]},");
+
+    // }
+    // Console.Write("]");
+    string message = string.Join(" ,", array);
+    Console.WriteLine($"[{string.Join(" ,", array)}]");
+
+    // Console.WriteLine("[{0}]", string.Join(", ", array));
+}
+//Немогу понять почему он не хочет вывести массив, если подскажите будет великолепно.

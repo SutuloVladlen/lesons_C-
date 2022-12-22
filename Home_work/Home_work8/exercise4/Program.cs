@@ -6,31 +6,29 @@ int[,,] array = GenerateRandomArray(2, 2, 2);
 PrintArray(array);
 int[,,] GenerateRandomArray(int a, int b, int c)
 {
+    int z = 0;
     Random random = new Random();
+    int[] arr = new int[a * b * c];
     int[,,] array = new int[a, b, c];
 
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
         {
-            for (int k = 0; k < array.GetLength(2); k++)
+            for (int k = 0; k < array.GetLength(2); k++, z++)
             {
                 array[i, j, k] = random.Next(0, 10);
-                for (int i1 = 0; i1 < array.GetLength(0); i1++)
+                arr[z] = array[i, j, k];
+                for (int o = 0; o < arr.Length; o++)
                 {
-                    for (int j1 = 0; j1 < array.GetLength(1); j1++)
-                    {
-                        for (int k1 = 0; k1 < array.GetLength(2); k1++)
-                        {
-                            if (array[i, j, k] == array[i1, j1, k1])
-                                array[i, j, k] = random.Next(0, 20);
-                        }
-                    }
+                    if (arr[z] == arr[o])
+                    { array[i, j, k] = random.Next(11, 20); }
                 }
+
             }
         }
-    }
 
+    }
     return (array);
 }
 void PrintArray(int[,,] array)

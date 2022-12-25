@@ -3,6 +3,7 @@ bool namber = int.TryParse(Console.ReadLine(), out int n);
 if (!namber)
 {
     Console.WriteLine("Введены некорректные данные.");
+    return;
 }
 Integers(n);
 void Integers(int n)
